@@ -53,22 +53,22 @@
     }
   },
   "files": [
-    "./src/clone.cjs",
-    "./src/clone.d.ts",
-    "./src/clone.js",
-    "./src/clone.mjs",
-    "./src/deserializeFromString.cjs",
-    "./src/deserializeFromString.d.ts",
-    "./src/deserializeFromString.js",
-    "./src/deserializeFromString.mjs",
-    "./src/index.cjs",
-    "./src/index.d.ts",
-    "./src/index.js",
-    "./src/index.mjs",
-    "./src/serializeToString.cjs",
-    "./src/serializeToString.d.ts",
-    "./src/serializeToString.js",
-    "./src/serializeToString.mjs"
+    "src/clone.cjs",
+    "src/clone.d.ts",
+    "src/clone.js",
+    "src/clone.mjs",
+    "src/deserializeFromString.cjs",
+    "src/deserializeFromString.d.ts",
+    "src/deserializeFromString.js",
+    "src/deserializeFromString.mjs",
+    "src/index.cjs",
+    "src/index.d.ts",
+    "src/index.js",
+    "src/index.mjs",
+    "src/serializeToString.cjs",
+    "src/serializeToString.d.ts",
+    "src/serializeToString.js",
+    "src/serializeToString.mjs"
   ],
   "jest": {
     "verbose": true
@@ -103,5 +103,5 @@
   },
   "type": "module",
   "types": "./src/index.d.ts",
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
