@@ -41,17 +41,6 @@
     "node": ">=12.0.0"
   },
   "engineStrict": true,
-  "exports": {
-    ".": {
-      "node": {
-        "import": "./index.mjs",
-        "require": "./index.cjs"
-      },
-      "import": "./index.mjs",
-      "require": "./index.cjs",
-      "default": "./index.js"
-    }
-  },
   "files": [
     "clone/clone.cjs",
     "clone/clone.js",
@@ -116,5 +105,5 @@
   },
   "type": "module",
   "types": "./index.d.ts",
-  "version": "0.0.4"
+  "version": "0.0.5"
 }
