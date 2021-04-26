@@ -1,3 +1,5 @@
+import { serialize } from "v8";
+
 /**
  * @category V8
  * @name serializeToString
@@ -6,4 +8,7 @@
  * @returns {String}
  * @since 0.0.1
  */
-export function serializeToString(value: any): string;
+
+export function serializeToString(value) {
+  return serialize(value).toString("binary");
+}

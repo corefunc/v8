@@ -12,17 +12,15 @@ const v8_1 = require("v8");
  * @throws {Error}
  * @since 0.0.1
  */
-function clone(objectToClone, returnOriginalOnError = true) {
-    if (returnOriginalOnError) {
-        try {
-            return v8_1.deserialize(v8_1.serialize(objectToClone));
-        }
-        catch (_error) {
-            return objectToClone;
-        }
+function clone(objectToClone, returnOriginalOnError) {
+  if (returnOriginalOnError) {
+    try {
+      return v8_1.deserialize(v8_1.serialize(objectToClone));
+    } catch (_error) {
+      return objectToClone;
     }
-    else {
-        return v8_1.deserialize(v8_1.serialize(objectToClone));
-    }
+  } else {
+    return v8_1.deserialize(v8_1.serialize(objectToClone));
+  }
 }
 exports.clone = clone;

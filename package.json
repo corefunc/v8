@@ -53,22 +53,35 @@
     }
   },
   "files": [
-    "src/clone.cjs",
-    "src/clone.d.ts",
-    "src/clone.js",
-    "src/clone.mjs",
-    "src/deserializeFromString.cjs",
-    "src/deserializeFromString.d.ts",
-    "src/deserializeFromString.js",
-    "src/deserializeFromString.mjs",
-    "src/index.cjs",
-    "src/index.d.ts",
-    "src/index.js",
-    "src/index.mjs",
-    "src/serializeToString.cjs",
-    "src/serializeToString.d.ts",
-    "src/serializeToString.js",
-    "src/serializeToString.mjs"
+    "clone/clone.cjs",
+    "clone/clone.js",
+    "clone/clone.mjs",
+    "clone/clone.ts",
+    "clone/index.cjs",
+    "clone/index.js",
+    "clone/index.mjs",
+    "clone/index.ts",
+    "deserialize/from-string.cjs",
+    "deserialize/from-string.d.ts",
+    "deserialize/from-string.js",
+    "deserialize/from-string.mjs",
+    "deserialize/index.cjs",
+    "deserialize/index.js",
+    "deserialize/index.mjs",
+    "deserialize/index.ts",
+    "index.cjs",
+    "index.d.ts",
+    "index.js",
+    "index.mjs",
+    "index.ts",
+    "serialize/index.cjs",
+    "serialize/index.js",
+    "serialize/index.mjs",
+    "serialize/index.ts",
+    "serialize/to-string.cjs",
+    "serialize/to-string.js",
+    "serialize/to-string.mjs",
+    "serialize/to-string.ts"
   ],
   "jest": {
     "verbose": true
@@ -83,8 +96,8 @@
     "v8"
   ],
   "license": "MIT",
-  "main": "./src/index.cjs",
-  "module": "./src/index.mjs",
+  "main": "./index.cjs",
+  "module": "./index.mjs",
   "name": "@corefunc/v8",
   "private": false,
   "repository": {
@@ -102,6 +115,6 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
   "type": "module",
-  "types": "./src/index.d.ts",
-  "version": "0.0.2"
+  "types": "./index.d.ts",
+  "version": "0.0.3"
 }
