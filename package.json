@@ -26,7 +26,6 @@
     "eslint-plugin-jsdoc": "32.3.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.4.0",
-    "eslint-plugin-promise": "5.1.0",
     "eslint-plugin-standard": "5.0.0",
     "jest": "26.6.3",
     "prettier": "2.2.1",
@@ -38,6 +37,39 @@
   "directories": {
     "test": "test"
   },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "engineStrict": true,
+  "exports": {
+    ".": {
+      "node": {
+        "import": "./src/index.mjs",
+        "require": "./src/index.cjs"
+      },
+      "import": "./src/index.mjs",
+      "require": "./src/index.cjs",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "./src/clone.cjs",
+    "./src/clone.d.ts",
+    "./src/clone.js",
+    "./src/clone.mjs",
+    "./src/deserializeFromString.cjs",
+    "./src/deserializeFromString.d.ts",
+    "./src/deserializeFromString.js",
+    "./src/deserializeFromString.mjs",
+    "./src/index.cjs",
+    "./src/index.d.ts",
+    "./src/index.js",
+    "./src/index.mjs",
+    "./src/serializeToString.cjs",
+    "./src/serializeToString.d.ts",
+    "./src/serializeToString.js",
+    "./src/serializeToString.mjs"
+  ],
   "jest": {
     "verbose": true
   },
@@ -51,11 +83,13 @@
     "v8"
   ],
   "license": "MIT",
+  "main": "./src/index.cjs",
+  "module": "./src/index.mjs",
   "name": "@corefunc/v8",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/corefunc/corefunc.git"
+    "url": "git+https://github.com/corefunc/v8.git"
   },
   "scripts": {
     "doc": "typedoc --options typedoc.json",
@@ -67,5 +101,7 @@
     "test:coverage": "jest --collect-coverage",
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
+  "type": "module",
+  "types": "./src/index.d.ts",
   "version": "0.0.1"
 }
