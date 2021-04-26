@@ -1,0 +1,71 @@
+{
+  "author": "Anton Trofimenko",
+  "bugs": {
+    "url": "https://github.com/corefunc/v8/issues"
+  },
+  "contributors": [
+    {
+      "email": "r37r0m0d3l@protonmail.com",
+      "name": "Anton Trofimenko"
+    }
+  ],
+  "description": "JavaScript V8 engine specific utilities",
+  "devDependencies": {
+    "@babel/core": "7.13.16",
+    "@babel/plugin-proposal-class-properties": "7.13.0",
+    "@babel/preset-env": "7.13.15",
+    "@types/node": "14.14.41",
+    "@typescript-eslint/eslint-plugin": "4.22.0",
+    "@typescript-eslint/parser": "4.22.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.25.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-config-standard": "16.0.2",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsdoc": "32.3.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-promise": "5.1.0",
+    "eslint-plugin-standard": "5.0.0",
+    "jest": "26.6.3",
+    "prettier": "2.2.1",
+    "tslint-config-standard": "9.0.0",
+    "typedoc": "0.20.36",
+    "typedoc-neo-theme": "1.1.0",
+    "typescript": "4.2.4"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "keywords": [
+    "ECMAScript",
+    "es6,",
+    "modules",
+    "stdlib,",
+    "util,",
+    "utilities",
+    "v8"
+  ],
+  "license": "MIT",
+  "name": "@corefunc/v8",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corefunc/corefunc.git"
+  },
+  "scripts": {
+    "doc": "typedoc --options typedoc.json",
+    "lint:js": "eslint ./**/*.mjs",
+    "lint:md": "remark .",
+    "package:upgrade": "npx npm-check --update",
+    "test": "jest --passWithNoTests",
+    "test:cjs": "node ./tests/index.cjs",
+    "test:coverage": "jest --collect-coverage",
+    "test:mjs": "node --experimental-modules ./tests/index.mjs"
+  },
+  "version": "0.0.1"
+}
