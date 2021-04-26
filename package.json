@@ -51,7 +51,7 @@
     "clone/index.mjs",
     "clone/index.ts",
     "deserialize/from-string.cjs",
-    "deserialize/from-string.d.ts",
+    "deserialize/from-string.ts",
     "deserialize/from-string.js",
     "deserialize/from-string.mjs",
     "deserialize/index.cjs",
@@ -104,5 +104,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
   "types": "./index.d.ts",
-  "version": "0.0.6"
+  "version": "0.0.7"
 }
