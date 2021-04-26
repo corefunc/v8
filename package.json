@@ -103,7 +103,6 @@
     "test:coverage": "jest --collect-coverage",
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
-  "type": "module",
   "types": "./index.d.ts",
-  "version": "0.0.5"
+  "version": "0.0.6"
 }
