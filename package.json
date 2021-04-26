@@ -44,12 +44,12 @@
   "exports": {
     ".": {
       "node": {
-        "import": "./src/index.mjs",
-        "require": "./src/index.cjs"
+        "import": "./index.mjs",
+        "require": "./index.cjs"
       },
-      "import": "./src/index.mjs",
-      "require": "./src/index.cjs",
-      "default": "./src/index.js"
+      "import": "./index.mjs",
+      "require": "./index.cjs",
+      "default": "./index.js"
     }
   },
   "files": [
@@ -116,5 +116,5 @@
   },
   "type": "module",
   "types": "./index.d.ts",
-  "version": "0.0.3"
+  "version": "0.0.4"
 }
