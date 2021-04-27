@@ -1,6 +1,6 @@
 import { deserialize } from "v8";
 
-function deserializeFromStringBasic(binaryString) {
+function deserializeFromStringBasic(binaryString: string): any {
   return deserialize(Buffer.from(binaryString, "binary"));
 }
 
@@ -18,7 +18,7 @@ export function deserializeFromString<Type extends Object | typeof Object.protot
   toPrototype?: Type,
 ): Type {
   if (!toPrototype) {
-    return deserializeFromStringBasic(binaryString);
+    return deserializeFromStringBasic(binaryString) as Type;
   }
   let instance;
   if (toPrototype.constructor.name === "Function") {
