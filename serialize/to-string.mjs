@@ -8,7 +8,6 @@ import { serialize } from "v8";
  * @returns {String}
  * @since 0.0.1
  */
-
 export function serializeToString(value) {
   return serialize(value).toString("binary");
 }

@@ -7,18 +7,18 @@ function deserializeFromStringBasic(binaryString: string): any {
 /**
  * @category V8
  * @name deserializeFromString
- * @description Deserialize string to value.
- * @param {String} binaryString String to deserialize from.
+ * @description Deserialize string to object value.
+ * @param {String} [binaryString] String to deserialize from.
  * @param {*=} toPrototype Prototype to be deserialized into.
  * @returns {*}
  * @since 0.0.1
  */
-export function deserializeFromString<Type extends Object | typeof Object.prototype>(
+export function deserializeFromString<ObjectType extends Record<string, any> | typeof Object.prototype>(
   binaryString: string,
-  toPrototype?: Type,
-): Type {
+  toPrototype?: ObjectType,
+): ObjectType {
   if (!toPrototype) {
-    return deserializeFromStringBasic(binaryString) as Type;
+    return deserializeFromStringBasic(binaryString) as ObjectType;
   }
   let instance;
   if (toPrototype.constructor.name === "Function") {
