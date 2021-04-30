@@ -104,5 +104,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
   "types": "./index.d.ts",
-  "version": "0.0.9"
+  "version": "0.0.10"
 }

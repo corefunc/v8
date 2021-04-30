@@ -5,11 +5,12 @@ import { deserialize, serialize } from "v8";
  * @name clone
  * @description Deep clone object. Note: don't use on objects containing Functions.
  * @param {*} value Object to be deep cloned.
+ * @param {Boolean=} [setPrototype=false]
  * @returns {Object}
  * @throws {Error}
  * @since 0.0.1
  */
-export function clone(value) {
+export function clone(value, setPrototype = false) {
   if (value === null || typeof value !== "object") {
     return value;
   }
@@ -41,23 +42,37 @@ export function clone(value) {
       if (errorOriginal.stack) {
         errorCloned.stack = errorOriginal.stack;
       }
+      // @ts-ignore
       if (errorOriginal.code) {
+        // @ts-ignore
         errorCloned.code = errorOriginal.code;
       }
+      // @ts-ignore
       if (errorOriginal.errno) {
+        // @ts-ignore
         errorCloned.errno = errorOriginal.errno;
       }
+      // @ts-ignore
       if (errorOriginal.syscall) {
+        // @ts-ignore
         errorCloned.syscall = errorOriginal.syscall;
       }
       errorCloned.message = errorOriginal.message;
       return errorCloned;
     }
     default:
-      try {
-        return Object.assign(Object.create(value), deserialize(serialize(value)));
-      } catch (_error) {
-        return Object.assign(Object.create(value), value);
+      if (setPrototype) {
+        try {
+          return Object.assign(Object.create(value), deserialize(serialize(value)));
+        } catch (_error) {
+          return Object.assign(Object.create(value), value);
+        }
+      } else {
+        try {
+          return deserialize(serialize(value));
+        } catch (_error) {
+          return value;
+        }
       }
   }
 }

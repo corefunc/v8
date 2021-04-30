@@ -33,7 +33,7 @@ class Omega {
   y = 2;
 }
 const omegaOne = new Omega();
-const omegaTwo = clone(omega1);
+const omegaTwo = clone(omega1, true);
 
 omegaOne.x = -10;
 

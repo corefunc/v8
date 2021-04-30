@@ -5,14 +5,12 @@ import { deserialize, serialize } from "v8";
  * @name clone
  * @description Deep clone object. Note: don't use on objects containing Functions.
  * @param {*} value Object to be deep cloned.
+ * @param {Boolean=} [setPrototype=false]
  * @returns {Object}
  * @throws {Error}
  * @since 0.0.1
  */
-export function clone<
-  Type extends unknown
-  // ObjectType extends Array<any> | Date | Map<any, any> | Record<string, any> | Set<any>
->(value: Type): Type {
+export function clone<Type extends unknown>(value: Type, setPrototype = false): Type {
   if (value === null || typeof value !== "object") {
     return value;
   }
@@ -63,10 +61,18 @@ export function clone<
       return errorCloned;
     }
     default:
-      try {
-        return Object.assign(Object.create(value as Record<string, any>), deserialize(serialize(value)));
-      } catch (_error) {
-        return Object.assign(Object.create(value as Record<string, any>), value);
+      if (setPrototype) {
+        try {
+          return Object.assign(Object.create(value as Record<string, any>), deserialize(serialize(value)));
+        } catch (_error) {
+          return Object.assign(Object.create(value as Record<string, any>), value);
+        }
+      } else {
+        try {
+          return deserialize(serialize(value));
+        } catch (_error) {
+          return value;
+        }
       }
   }
 }
