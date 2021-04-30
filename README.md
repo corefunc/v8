@@ -2,20 +2,11 @@
 
 # CoreFunc V8
 
-JavaScript V8 engine specific utilities.
+🇻8️ JavaScript V8 engine specific utilities.
 
 [![NPM Version][npm-version-img]][npm-version-url]
 [![NPM Downloads][npm-downloads-img]][npm-downloads-url]
 [![TypeScript Typings][ts-img]][ts-url]
-
-
-## 🇻8️
-
----
-
-> **Please Note:** This is "Work in Progress" package. The new functionality will be added very slowly.
-
----
 
 ### Clone
 
@@ -130,8 +121,6 @@ const binaryString = serializeToString(omega);
 // `ÿ\ro"\x01xI\x02"\x01yI\x04{\x02`
 console.log(binaryString);
 ```
-
----
 
 ## See also
 
