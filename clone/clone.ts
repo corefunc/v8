@@ -4,13 +4,14 @@ import { deserialize, serialize } from "v8";
  * @category V8
  * @name clone
  * @description Deep clone object. Note: don't use on objects containing Functions.
+ * @summary ```import { clone } from '@corefunc/v8/clone/clone';```
  * @param {*} value Object to be deep cloned.
- * @param {Boolean=} [setPrototype=false]
+ * @param {boolean=} [setPrototype=true]
  * @returns {Object}
  * @throws {Error}
  * @since 0.0.1
  */
-export function clone<Type extends unknown>(value: Type, setPrototype = false): Type {
+export function clone<Type extends unknown>(value: Type, setPrototype = true): Type {
   if (value === null || typeof value !== "object") {
     return value;
   }

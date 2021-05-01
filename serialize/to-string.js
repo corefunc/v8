@@ -7,7 +7,7 @@ const v8_1 = require("v8");
  * @name serializeToString
  * @description Serialize value to binary string.
  * @param {*} value Value to serialize.
- * @returns {String}
+ * @returns {string}
  * @since 0.0.1
  */
 function serializeToString(value) {

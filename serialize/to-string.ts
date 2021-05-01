@@ -5,7 +5,7 @@ import { serialize } from "v8";
  * @name serializeToString
  * @description Serialize value to binary string.
  * @param {*} value Value to serialize.
- * @returns {String}
+ * @returns {string}
  * @since 0.0.1
  */
 export function serializeToString(value: any): string {

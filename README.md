@@ -8,6 +8,8 @@
 [![NPM Downloads][npm-downloads-img]][npm-downloads-url]
 [![TypeScript Typings][ts-img]][ts-url]
 
+## API Reference
+
 ### Clone
 
 ```javascript
@@ -33,7 +35,7 @@ class Omega {
   y = 2;
 }
 const omegaOne = new Omega();
-const omegaTwo = clone(omega1, true);
+const omegaTwo = clone(omegaOne, true);
 
 omegaOne.x = -10;
 
@@ -87,10 +89,56 @@ console.log(alpha.message);
 console.log(beta.message);
 ```
 
+### Clone Marshalling
+
+```javascript
+import {
+  cloneMarshalling,
+} from "@corefunc/v8/clone/clone-marshalling";
+
+class Omega {
+  x = 1;
+  y = 2;
+}
+const omegaOne = new Omega();
+const omegaTwo = cloneMarshalling(omegaOne);
+
+omegaOne.x = -10;
+
+// Omega { x: -10, y: 2 }
+console.log(omegaOne);
+// Omega { x: 1, y: 2 }
+console.log(omegaTwo);
+```
+
+### Clone Shallow
+
+```javascript
+import {
+  cloneShallow,
+} from "@corefunc/v8/clone/clone-shallow";
+
+class Omega {
+  x = 1;
+  y = 2;
+}
+const omegaOne = new Omega();
+const omegaTwo = cloneShallow(omegaOne);
+
+omegaOne.x = -10;
+
+// Omega { x: -10, y: 2 }
+console.log(omegaOne);
+// { x: 1, y: 2 }
+console.log(omegaTwo);
+```
+
 ### Deserialize
 
 ```javascript
-import { deserializeFromString } from "@corefunc/v8/deserialize/from-string";
+import {
+  deserializeFromString,
+} from "@corefunc/v8/deserialize/from-string";
 
 class Omega {
   x = 1;
@@ -109,7 +157,9 @@ console.log(omega);
 ### Serialize
 
 ```javascript
-import { deserializeFromString } from "@corefunc/v8/serialize/to-string";
+import {
+  serializeToString,
+} from "@corefunc/v8/serialize/to-string";
 
 class Omega {
   x = 1;

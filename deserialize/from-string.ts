@@ -1,5 +1,9 @@
 import { deserialize } from "v8";
 
+/**
+ * @param {string} [binaryString]
+ * @returns {*}
+ */
 function deserializeFromStringBasic(binaryString: string): any {
   return deserialize(Buffer.from(binaryString, "binary"));
 }
@@ -8,7 +12,7 @@ function deserializeFromStringBasic(binaryString: string): any {
  * @category V8
  * @name deserializeFromString
  * @description Deserialize string to object value.
- * @param {String} [binaryString] String to deserialize from.
+ * @param {string} [binaryString] String to deserialize from.
  * @param {*=} toPrototype Prototype to be deserialized into.
  * @returns {*}
  * @since 0.0.1

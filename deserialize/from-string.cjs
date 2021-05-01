@@ -2,6 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deserializeFromString = void 0;
 const v8_1 = require("v8");
+/**
+ * @param {string} [binaryString]
+ * @returns {*}
+ */
 function deserializeFromStringBasic(binaryString) {
   return v8_1.deserialize(Buffer.from(binaryString, "binary"));
 }
@@ -9,7 +13,7 @@ function deserializeFromStringBasic(binaryString) {
  * @category V8
  * @name deserializeFromString
  * @description Deserialize string to object value.
- * @param {String} [binaryString] String to deserialize from.
+ * @param {string} [binaryString] String to deserialize from.
  * @param {*=} toPrototype Prototype to be deserialized into.
  * @returns {*}
  * @since 0.0.1

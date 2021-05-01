@@ -6,6 +6,7 @@ const v8_1 = require("v8");
  * @category V8
  * @name clone
  * @description Deep clone object. Note: don't use on objects containing Functions.
+ * @summary ```import { clone } from '@corefunc/v8/clone/clone';```
  * @param {*} value Object to be deep cloned.
  * @param {Boolean=} [setPrototype=false]
  * @returns {Object}
