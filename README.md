@@ -185,5 +185,5 @@ console.log(binaryString);
 [npm-version-img]: https://badgen.net/npm/v/@corefunc/v8?&icon=npm&label=npm&color=DD3636
 [npm-downloads-url]: https://npmjs.com/package/@corefunc/v8
 [npm-downloads-img]: https://badgen.net/npm/dt/@corefunc/v8?&icon=terminal&label=downloads&color=009688
-[ts-url]: https://github.com/corefunc/v8/blob/master/dist/index.d.ts
+[ts-url]: https://github.com/corefunc/v8/blob/master/index.d.ts
 [ts-img]: https://badgen.net/npm/types/@corefunc/v8?&icon=typescript&label=types&color=1E90FF
