@@ -1,0 +1,276 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@corefunc/v8</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<ul class="results-priority" style="display:none">
+					</ul>
+					<a href="index.html" class="title">@corefunc/v8</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Modules</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/base64.html">base64</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/clone.html">clone</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/deserialize.html">deserialize</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/serialize.html">serialize</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-7 offset-3 col-content">
+			<h1>@corefunc/v8</h1>
+			<div class="tsd-panel tsd-typography">
+				<p><img src="https://raw.githubusercontent.com/corefunc/v8/master/.github/assets/logo_128.png?raw=true" alt="CoreFunc V8" title="CoreFunc V8"></p>
+				<a href="#corefunc-v8" id="corefunc-v8" style="color: inherit; text-decoration: none;">
+					<h1>CoreFunc V8</h1>
+				</a>
+				<p>🇻8️ JavaScript V8 engine specific utilities.</p>
+				<p><a href="https://npmjs.com/package/@corefunc/v8"><img src="https://badgen.net/npm/v/@corefunc/v8?&icon=npm&label=npm&color=DD3636" alt="NPM Version"></a>
+					<a href="https://npmjs.com/package/@corefunc/v8"><img src="https://badgen.net/npm/dt/@corefunc/v8?&icon=terminal&label=downloads&color=009688" alt="NPM Downloads"></a>
+				<a href="https://github.com/corefunc/v8/blob/master/index.d.ts"><img src="https://badgen.net/npm/types/@corefunc/v8?&icon=typescript&label=types&color=1E90FF" alt="TypeScript Typings"></a></p>
+				<a href="#api-reference" id="api-reference" style="color: inherit; text-decoration: none;">
+					<h2>API Reference</h2>
+				</a>
+				<a href="#clone" id="clone" style="color: inherit; text-decoration: none;">
+					<h3>Clone</h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">clone</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/clone/clone&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">obj</span><span style="color: #000000"> = { </span><span style="color: #001080">prop:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;original&quot;</span><span style="color: #000000"> };</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">array</span><span style="color: #000000"> = [</span><span style="color: #001080">obj</span><span style="color: #000000">];</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">clonedArray</span><span style="color: #000000"> = </span><span style="color: #795E26">clone</span><span style="color: #000000">(</span><span style="color: #001080">array</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">array</span><span style="color: #000000">[</span><span style="color: #098658">0</span><span style="color: #000000">].</span><span style="color: #001080">prop</span><span style="color: #000000"> = </span><span style="color: #A31515">&quot;changed&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// [ { prop: &#039;changed&#039; } ]</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">array</span><span style="color: #000000">);</span>
+<span style="color: #008000">// [ { prop: &#039;original&#039; } ]</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">clonedArray</span><span style="color: #000000">);</span>
+</code></pre>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">clone</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/clone/clone&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Omega</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">x</span><span style="color: #000000"> = </span><span style="color: #098658">1</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #001080">y</span><span style="color: #000000"> = </span><span style="color: #098658">2</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">omegaOne</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Omega</span><span style="color: #000000">();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">omegaTwo</span><span style="color: #000000"> = </span><span style="color: #795E26">clone</span><span style="color: #000000">(</span><span style="color: #001080">omegaOne</span><span style="color: #000000">, </span><span style="color: #0000FF">true</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">omegaOne</span><span style="color: #000000">.</span><span style="color: #001080">x</span><span style="color: #000000"> = -</span><span style="color: #098658">10</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// Omega { x: -10, y: 2 }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">omegaOne</span><span style="color: #000000">);</span>
+<span style="color: #008000">// Omega { x: 1, y: 2 }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">omegaTwo</span><span style="color: #000000">);</span>
+</code></pre>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">clone</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/clone/clone&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">obj</span><span style="color: #000000"> = { </span><span style="color: #001080">prop:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;original&quot;</span><span style="color: #000000"> };</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">setOriginal</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Set</span><span style="color: #000000">([</span><span style="color: #001080">obj</span><span style="color: #000000">]);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">setCloned</span><span style="color: #000000"> = </span><span style="color: #795E26">clone</span><span style="color: #000000">(</span><span style="color: #001080">setOriginal</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">obj</span><span style="color: #000000">.</span><span style="color: #001080">prop</span><span style="color: #000000"> = </span><span style="color: #A31515">&quot;changed&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// Set(1) { { prop: &#039;changed&#039; } }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">setOriginal</span><span style="color: #000000">);</span>
+<span style="color: #008000">// Set(1) { { prop: &#039;original&#039; } }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">setCloned</span><span style="color: #000000">);</span>
+</code></pre>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">clone</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/clone/clone&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">obj</span><span style="color: #000000"> = { </span><span style="color: #001080">prop:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;here is my password&quot;</span><span style="color: #000000"> };</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">mapFirst</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Map</span><span style="color: #000000">([[</span><span style="color: #A31515">&quot;secret&quot;</span><span style="color: #000000">, </span><span style="color: #001080">obj</span><span style="color: #000000">]]);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">mapSecond</span><span style="color: #000000"> = </span><span style="color: #795E26">clone</span><span style="color: #000000">(</span><span style="color: #001080">mapFirst</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">secret</span><span style="color: #000000"> = </span><span style="color: #001080">mapFirst</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;secret&quot;</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">secret</span><span style="color: #000000">.</span><span style="color: #001080">prop</span><span style="color: #000000"> = </span><span style="color: #A31515">&quot;there is no secret anymore&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// Map(1) { &#039;secret&#039; =&gt; { prop: &#039;there is no secret anymore&#039; } }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">mapFirst</span><span style="color: #000000">);</span>
+<span style="color: #008000">// Map(1) { &#039;secret&#039; =&gt; { prop: &#039;here is my password&#039; } }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">mapSecond</span><span style="color: #000000">);</span>
+</code></pre>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">clone</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/clone/clone&quot;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">alpha</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Error</span><span style="color: #000000">(</span><span style="color: #A31515">`Just error`</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">beta</span><span style="color: #000000"> = </span><span style="color: #795E26">clone</span><span style="color: #000000">(</span><span style="color: #001080">alpha</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">alpha</span><span style="color: #000000">.</span><span style="color: #001080">message</span><span style="color: #000000"> = </span><span style="color: #A31515">`Now it&#039;s not`</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// `Now it&#039;s not`</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">alpha</span><span style="color: #000000">.</span><span style="color: #001080">message</span><span style="color: #000000">);</span>
+<span style="color: #008000">// `Just error`</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">beta</span><span style="color: #000000">.</span><span style="color: #001080">message</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#clone-marshalling" id="clone-marshalling" style="color: inherit; text-decoration: none;">
+					<h3>Clone Marshalling</h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">cloneMarshalling</span><span style="color: #000000">,</span>
+<span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/clone/clone-marshalling&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Omega</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">x</span><span style="color: #000000"> = </span><span style="color: #098658">1</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #001080">y</span><span style="color: #000000"> = </span><span style="color: #098658">2</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">omegaOne</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Omega</span><span style="color: #000000">();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">omegaTwo</span><span style="color: #000000"> = </span><span style="color: #795E26">cloneMarshalling</span><span style="color: #000000">(</span><span style="color: #001080">omegaOne</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">omegaOne</span><span style="color: #000000">.</span><span style="color: #001080">x</span><span style="color: #000000"> = -</span><span style="color: #098658">10</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// Omega { x: -10, y: 2 }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">omegaOne</span><span style="color: #000000">);</span>
+<span style="color: #008000">// Omega { x: 1, y: 2 }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">omegaTwo</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#clone-shallow" id="clone-shallow" style="color: inherit; text-decoration: none;">
+					<h3>Clone Shallow</h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">cloneShallow</span><span style="color: #000000">,</span>
+<span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/clone/clone-shallow&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Omega</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">x</span><span style="color: #000000"> = </span><span style="color: #098658">1</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #001080">y</span><span style="color: #000000"> = </span><span style="color: #098658">2</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">omegaOne</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Omega</span><span style="color: #000000">();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">omegaTwo</span><span style="color: #000000"> = </span><span style="color: #795E26">cloneShallow</span><span style="color: #000000">(</span><span style="color: #001080">omegaOne</span><span style="color: #000000">);</span>
+
+<span style="color: #001080">omegaOne</span><span style="color: #000000">.</span><span style="color: #001080">x</span><span style="color: #000000"> = -</span><span style="color: #098658">10</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// Omega { x: -10, y: 2 }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">omegaOne</span><span style="color: #000000">);</span>
+<span style="color: #008000">// { x: 1, y: 2 }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">omegaTwo</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#deserialize" id="deserialize" style="color: inherit; text-decoration: none;">
+					<h3>Deserialize</h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">deserializeFromString</span><span style="color: #000000">,</span>
+<span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/deserialize/from-string&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Omega</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">x</span><span style="color: #000000"> = </span><span style="color: #098658">1</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #001080">y</span><span style="color: #000000"> = </span><span style="color: #098658">2</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">binaryString</span><span style="color: #000000"> = </span><span style="color: #A31515">`ÿ</span><span style="color: #EE0000">\r</span><span style="color: #A31515">o&quot;</span><span style="color: #EE0000">\x01</span><span style="color: #A31515">xI</span><span style="color: #EE0000">\x02</span><span style="color: #A31515">&quot;</span><span style="color: #EE0000">\x01</span><span style="color: #A31515">yI</span><span style="color: #EE0000">\x04</span><span style="color: #A31515">{</span><span style="color: #EE0000">\x02</span><span style="color: #A31515">`</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">obj</span><span style="color: #000000"> = </span><span style="color: #795E26">deserializeFromString</span><span style="color: #000000">(</span><span style="color: #001080">binaryString</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">omega</span><span style="color: #000000"> = </span><span style="color: #795E26">deserializeFromString</span><span style="color: #000000">(</span><span style="color: #001080">binaryString</span><span style="color: #000000">, </span><span style="color: #001080">Omega</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// { x: 1, y: 2 }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">obj</span><span style="color: #000000">);</span>
+<span style="color: #008000">// Omega { x: 1, y: 2 }</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">omega</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#serialize" id="serialize" style="color: inherit; text-decoration: none;">
+					<h3>Serialize</h3>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">serializeToString</span><span style="color: #000000">,</span>
+<span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/serialize/to-string&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Omega</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">x</span><span style="color: #000000"> = </span><span style="color: #098658">1</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #001080">y</span><span style="color: #000000"> = </span><span style="color: #098658">2</span><span style="color: #000000">;</span>
+<span style="color: #000000">}</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">omega</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Omega</span><span style="color: #000000">();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">binaryString</span><span style="color: #000000"> = </span><span style="color: #795E26">serializeToString</span><span style="color: #000000">(</span><span style="color: #001080">omega</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// `ÿ\ro&quot;\x01xI\x02&quot;\x01yI\x04{\x02`</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">binaryString</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#see-also" id="see-also" style="color: inherit; text-decoration: none;">
+					<h2>See also</h2>
+				</a>
+				<p><a href="https://r37r0m0d3l.icu/open_source_map">💾 My other projects</a></p>
+				<img alt="Open Source" src="https://raw.githubusercontent.com/r37r0m0d3l/r37r0m0d3l/master/osmap.svg?sanitize=true" width="960" height="520" style="display:block;height:auto;margin-left:auto;margin-right:auto;min-height:520px;min-width:960px;width:100%;">
+				<!-- Badges -->
+			</div>
+			<!--{&quot;options&quot;:&quot;typedoc.json&quot;,&quot;tsconfig&quot;:&quot;D:\\git\\corefunc\\v8&quot;,&quot;entryPoints&quot;:[&quot;base64/index.ts&quot;,&quot;clone/index.ts&quot;,&quot;deserialize/index.ts&quot;,&quot;serialize/index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;./**/*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;./.github/docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
+		</div>
+		<div class="col-2 col-menu secondary-menu">
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
