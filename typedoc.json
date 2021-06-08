@@ -3,6 +3,6 @@
   "entryPoints": ["base64/index.ts", "clone/index.ts", "deserialize/index.ts", "serialize/index.ts"],
   "exclude": ["**/*+(index|.spec|.e2e).ts"],
   "externalPattern": ["./**/*.ts"],
-  "out": "./.github/docs",
+  "out": "./docs",
   "theme": "./node_modules/typedoc-neo-theme/bin/default"
 }

@@ -92,6 +92,7 @@
     "verbose": true
   },
   "keywords": [
+    "base64",
     "ECMAScript",
     "clone",
     "deserialize",
@@ -124,5 +125,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
   "types": "./index.d.ts",
-  "version": "0.1.1"
+  "version": "0.1.2"
 }

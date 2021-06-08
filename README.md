@@ -8,9 +8,28 @@
 [![NPM Downloads][npm-downloads-img]][npm-downloads-url]
 [![TypeScript Typings][ts-img]][ts-url]
 
-## API Reference
+## Reference
 
-### Clone
+### base64Decode
+
+<details>
+    <summary><b>base64Decode(base64Text, encoding, start, end)</b></summary>
+Decodes to a string according to the specified character encoding in encoding.
+
+```javascript
+import { base64Decode } from "@corefunc/v8/base64/decode";
+
+// "example text"
+console.log(base64Decode("ZXhhbXBsZSB0ZXh0"));
+```
+
+</details>
+
+### clone
+
+<details>
+    <summary><b>clone(value, setPrototype)</b></summary>
+Deep clone object. Note: don't use on objects containing Functions.
 
 ```javascript
 import { clone } from "@corefunc/v8/clone/clone";
@@ -89,7 +108,13 @@ console.log(alpha.message);
 console.log(beta.message);
 ```
 
-### Clone Marshalling
+</details>
+
+### cloneMarshalling
+
+<details>
+    <summary><b>cloneMarshalling(value)</b></summary>
+Deep clone object and sets the prototype. Note: don't use on objects containing Functions.
 
 ```javascript
 import {
@@ -111,7 +136,13 @@ console.log(omegaOne);
 console.log(omegaTwo);
 ```
 
-### Clone Shallow
+</details>
+
+### cloneShallow
+
+<details>
+    <summary><b>cloneShallow(value)</b></summary>
+Deep clone any object to plain object.
 
 ```javascript
 import {
@@ -133,7 +164,13 @@ console.log(omegaOne);
 console.log(omegaTwo);
 ```
 
-### Deserialize
+</details>
+
+### deserializeFromString
+
+<details>
+    <summary><b>deserializeFromString(binaryString)</b></summary>
+Deserialize string to object value.
 
 ```javascript
 import {
@@ -154,7 +191,13 @@ console.log(obj);
 console.log(omega);
 ```
 
-### Serialize
+</details>
+
+### serializeToString
+
+<details>
+    <summary><b>serializeToString(value)</b></summary>
+Serialize value to binary string.
 
 ```javascript
 import {
@@ -171,6 +214,8 @@ const binaryString = serializeToString(omega);
 // `ÿ\ro"\x01xI\x02"\x01yI\x04{\x02`
 console.log(binaryString);
 ```
+
+</details>
 
 ## See also
 
