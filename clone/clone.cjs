@@ -8,19 +8,19 @@ const v8_1 = require("v8");
  * @description Deep clone object. Note: don't use on objects containing Functions.
  * @summary ```import { clone } from '@corefunc/v8/clone/clone';```
  * @param {*} value Object to be deep cloned.
- * @param {Boolean=} [setPrototype=false]
+ * @param {boolean=} [setPrototype=true]
  * @returns {Object}
  * @throws {Error}
  * @since 0.0.1
  */
-function clone(value, setPrototype = false) {
+function clone(value, setPrototype = true) {
   if (value === null || typeof value !== "object") {
     return value;
   }
   switch (true) {
     case Array.isArray(value): {
       try {
-        return v8_1.deserialize(v8_1.serialize(value));
+        return (0, v8_1.deserialize)((0, v8_1.serialize)(value));
       } catch (_error) {
         return value.map((value) => clone(value));
       }
@@ -66,13 +66,13 @@ function clone(value, setPrototype = false) {
     default:
       if (setPrototype) {
         try {
-          return Object.assign(Object.create(value), v8_1.deserialize(v8_1.serialize(value)));
+          return Object.assign(Object.create(value), (0, v8_1.deserialize)((0, v8_1.serialize)(value)));
         } catch (_error) {
           return Object.assign(Object.create(value), value);
         }
       } else {
         try {
-          return v8_1.deserialize(v8_1.serialize(value));
+          return (0, v8_1.deserialize)((0, v8_1.serialize)(value));
         } catch (_error) {
           return value;
         }

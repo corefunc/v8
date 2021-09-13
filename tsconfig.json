@@ -18,6 +18,7 @@
     "base64",
     "clone",
     "deserialize",
+    "generate",
     "serialize"
   ]
 }

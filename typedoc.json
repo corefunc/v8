@@ -1,6 +1,12 @@
 {
   "categorizeByGroup": true,
-  "entryPoints": ["base64/index.ts", "clone/index.ts", "deserialize/index.ts", "serialize/index.ts"],
+  "entryPoints": [
+    "base64/index.ts",
+    "clone/index.ts",
+    "deserialize/index.ts",
+    "generate/index.ts",
+    "serialize/index.ts"
+  ],
   "exclude": ["**/*+(index|.spec|.e2e).ts"],
   "externalPattern": ["./**/*.ts"],
   "out": "./docs",

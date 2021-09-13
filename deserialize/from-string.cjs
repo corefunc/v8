@@ -7,7 +7,7 @@ const v8_1 = require("v8");
  * @returns {*}
  */
 function deserializeFromStringBasic(binaryString) {
-  return v8_1.deserialize(Buffer.from(binaryString, "binary"));
+  return (0, v8_1.deserialize)(Buffer.from(binaryString, "binary"));
 }
 /**
  * @category V8

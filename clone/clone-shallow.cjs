@@ -13,6 +13,6 @@ const clone_1 = require("./clone.cjs");
  * @since 0.1.0
  */
 function cloneShallow(value) {
-  return clone_1.clone(value, false);
+  return (0, clone_1.clone)(value, false);
 }
 exports.cloneShallow = cloneShallow;

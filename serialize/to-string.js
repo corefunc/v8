@@ -11,6 +11,6 @@ const v8_1 = require("v8");
  * @since 0.0.1
  */
 function serializeToString(value) {
-    return v8_1.serialize(value).toString("binary");
+    return (0, v8_1.serialize)(value).toString("binary");
 }
 exports.serializeToString = serializeToString;
