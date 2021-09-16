@@ -137,5 +137,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
   "types": "./index.d.ts",
-  "version": "0.2.0"
+  "version": "0.2.1"
 }
