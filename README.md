@@ -10,7 +10,7 @@
 
 ## Reference
 
-### base64Decode
+### "Base64"
 
 <details>
     <summary><b>base64Decode(base64Text, encoding, start, end)</b></summary>
@@ -25,7 +25,7 @@ console.log(base64Decode("ZXhhbXBsZSB0ZXh0"));
 
 </details>
 
-### clone
+### "Clone"
 
 <details>
     <summary><b>clone(value, setPrototype)</b></summary>
@@ -110,8 +110,6 @@ console.log(beta.message);
 
 </details>
 
-### cloneMarshalling
-
 <details>
     <summary><b>cloneMarshalling(value)</b></summary>
 Deep clone object and sets the prototype. Note: don't use on objects containing Functions.
@@ -137,8 +135,6 @@ console.log(omegaTwo);
 ```
 
 </details>
-
-### cloneShallow
 
 <details>
     <summary><b>cloneShallow(value)</b></summary>
@@ -166,7 +162,7 @@ console.log(omegaTwo);
 
 </details>
 
-### deserializeFromString
+### "Deserialize"
 
 <details>
     <summary><b>deserializeFromString(binaryString)</b></summary>
@@ -193,7 +189,57 @@ console.log(omega);
 
 </details>
 
-### serializeToString
+### "Generate"
+
+<details>
+    <summary><b>generateNumber(minimum, maximum)</b></summary>
+Secure random number generator. Integers only.
+
+```javascript
+import {
+  generateNumber,
+} from "@corefunc/v8/generate/number";
+
+const integer = await generateNumber(-100, 100);
+// 56
+console.log(integer);
+```
+
+</details>
+
+<details>
+    <summary><b>generateUuid4()</b></summary>
+Generates a random RFC 4122 version 4 UUID.
+
+```javascript
+import {
+  generateUuid4,
+} from "@corefunc/v8/generate/uuid4";
+
+// "71ce5138-c908-47b0-b599-327bcec8d213"
+console.log(generateUuid4());
+```
+
+</details>
+
+<details>
+    <summary><b>generateUuid5()</b></summary>
+Generates a RFC 4122 version 5 UUID.
+
+```javascript
+import {
+  generateUuid5,
+} from "@corefunc/v8/generate/uuid5";
+
+const name = `{"a":1}`;
+const nameSpace = "924a63b2-7e67-435e-94b7-57b5f806b105";
+// "a923cf68-cd80-577c-981d-c219fbcb3bee"
+console.log(generateUuid5(name, nameSpace));
+```
+
+</details>
+
+### "Serialize"
 
 <details>
     <summary><b>serializeToString(value)</b></summary>

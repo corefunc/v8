@@ -102,8 +102,11 @@
 				<a href="#reference" id="reference" style="color: inherit; text-decoration: none;">
 					<h2>Reference</h2>
 				</a>
+				<a href="#quotbase64quot" id="quotbase64quot" style="color: inherit; text-decoration: none;">
+					<h3>&quot;Base64&quot;</h3>
+				</a>
 				<a href="#base64decode" id="base64decode" style="color: inherit; text-decoration: none;">
-					<h3>base64Decode</h3>
+					<h4>base64Decode</h4>
 				</a>
 				<details>
 					<summary><b>base64Decode(base64Text, encoding, start, end)</b></summary>
@@ -114,8 +117,11 @@
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">base64Decode</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;ZXhhbXBsZSB0ZXh0&quot;</span><span style="color: #000000">));</span>
 </code></pre>
 				</details>
+				<a href="#quotclonequot" id="quotclonequot" style="color: inherit; text-decoration: none;">
+					<h3>&quot;Clone&quot;</h3>
+				</a>
 				<a href="#clone" id="clone" style="color: inherit; text-decoration: none;">
-					<h3>clone</h3>
+					<h4>clone</h4>
 				</a>
 				<details>
 					<summary><b>clone(value, setPrototype)</b></summary>
@@ -189,7 +195,7 @@
 </code></pre>
 				</details>
 				<a href="#clonemarshalling" id="clonemarshalling" style="color: inherit; text-decoration: none;">
-					<h3>cloneMarshalling</h3>
+					<h4>cloneMarshalling</h4>
 				</a>
 				<details>
 					<summary><b>cloneMarshalling(value)</b></summary>
@@ -214,7 +220,7 @@
 </code></pre>
 				</details>
 				<a href="#cloneshallow" id="cloneshallow" style="color: inherit; text-decoration: none;">
-					<h3>cloneShallow</h3>
+					<h4>cloneShallow</h4>
 				</a>
 				<details>
 					<summary><b>cloneShallow(value)</b></summary>
@@ -238,8 +244,11 @@
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">omegaTwo</span><span style="color: #000000">);</span>
 </code></pre>
 				</details>
+				<a href="#quotdeserializequot" id="quotdeserializequot" style="color: inherit; text-decoration: none;">
+					<h3>&quot;Deserialize&quot;</h3>
+				</a>
 				<a href="#deserializefromstring" id="deserializefromstring" style="color: inherit; text-decoration: none;">
-					<h3>deserializeFromString</h3>
+					<h4>deserializeFromString</h4>
 				</a>
 				<details>
 					<summary><b>deserializeFromString(binaryString)</b></summary>
@@ -262,8 +271,59 @@
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">omega</span><span style="color: #000000">);</span>
 </code></pre>
 				</details>
+				<a href="#quotgeneratequot" id="quotgeneratequot" style="color: inherit; text-decoration: none;">
+					<h3>&quot;Generate&quot;</h3>
+				</a>
+				<a href="#generatenumber" id="generatenumber" style="color: inherit; text-decoration: none;">
+					<h4>generateNumber</h4>
+				</a>
+				<details>
+					<summary><b>generateNumber(minimum, maximum)</b></summary>
+					Secure random number generator. Integers only.
+					<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">generateNumber</span><span style="color: #000000">,</span>
+<span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/generate/number&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">integer</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">generateNumber</span><span style="color: #000000">(-</span><span style="color: #098658">100</span><span style="color: #000000">, </span><span style="color: #098658">100</span><span style="color: #000000">);</span>
+<span style="color: #008000">// 56</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">integer</span><span style="color: #000000">);</span>
+</code></pre>
+				</details>
+				<a href="#generateuuid4" id="generateuuid4" style="color: inherit; text-decoration: none;">
+					<h4>generateUuid4</h4>
+				</a>
+				<details>
+					<summary><b>generateUuid4()</b></summary>
+					Generates a random RFC 4122 version 4 UUID.
+					<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">generateUuid4</span><span style="color: #000000">,</span>
+<span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/generate/uuid4&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// &quot;71ce5138-c908-47b0-b599-327bcec8d213&quot;</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">generateUuid4</span><span style="color: #000000">());</span>
+</code></pre>
+				</details>
+				<a href="#generateuuid5" id="generateuuid5" style="color: inherit; text-decoration: none;">
+					<h4>generateUuid5</h4>
+				</a>
+				<details>
+					<summary><b>generateUuid5()</b></summary>
+					Generates a RFC 4122 version 5 UUID.
+					<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">generateUuid5</span><span style="color: #000000">,</span>
+<span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/v8/generate/uuid5&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">name</span><span style="color: #000000"> = </span><span style="color: #A31515">`{&quot;a&quot;:1}`</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">nameSpace</span><span style="color: #000000"> = </span><span style="color: #A31515">&quot;924a63b2-7e67-435e-94b7-57b5f806b105&quot;</span><span style="color: #000000">;</span>
+<span style="color: #008000">// &quot;a923cf68-cd80-577c-981d-c219fbcb3bee&quot;</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">generateUuid5</span><span style="color: #000000">(</span><span style="color: #001080">name</span><span style="color: #000000">, </span><span style="color: #001080">nameSpace</span><span style="color: #000000">));</span>
+</code></pre>
+				</details>
+				<a href="#quotserializequot" id="quotserializequot" style="color: inherit; text-decoration: none;">
+					<h3>&quot;Serialize&quot;</h3>
+				</a>
 				<a href="#serializetostring" id="serializetostring" style="color: inherit; text-decoration: none;">
-					<h3>serializeToString</h3>
+					<h4>serializeToString</h4>
 				</a>
 				<details>
 					<summary><b>serializeToString(value)</b></summary>
