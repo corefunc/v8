@@ -13,6 +13,6 @@ const clone_1 = require("./clone");
  * @since 0.1.0
  */
 function cloneMarshalling(value) {
-  return (0, clone_1.clone)(value, true);
+    return (0, clone_1.clone)(value, true);
 }
 exports.cloneMarshalling = cloneMarshalling;

@@ -69,7 +69,7 @@ export enum NAMESPACE {
  * @param {any} name
  * @param {string} [namespace=NAMESPACE.OID] Namespace for generator.
  * @returns {string} - RFC 4122 version 5 UUID.
- * @since 0.2.2
+ * @since 0.2.3
  */
 export function generateUuid5(name: any, namespace: string = NAMESPACE.OID): string {
   let nameAsString;

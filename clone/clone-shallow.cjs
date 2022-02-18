@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.cloneShallow = void 0;
-const clone_1 = require("./clone.cjs");
+const clone_1 = require("./clone");
 /**
  * @category V8
  * @name cloneShallow
@@ -13,6 +13,6 @@ const clone_1 = require("./clone.cjs");
  * @since 0.1.0
  */
 function cloneShallow(value) {
-  return (0, clone_1.clone)(value, false);
+    return (0, clone_1.clone)(value, false);
 }
 exports.cloneShallow = cloneShallow;

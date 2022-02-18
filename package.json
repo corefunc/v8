@@ -14,7 +14,7 @@
     "@babel/core": "7.15.0",
     "@babel/plugin-proposal-class-properties": "7.14.5",
     "@babel/preset-env": "7.15.0",
-    "@types/node": "16.7.10",
+    "@types/node": "12.20.0",
     "@typescript-eslint/eslint-plugin": "4.30.0",
     "@typescript-eslint/parser": "4.30.0",
     "babel-core": "7.0.0-bridge.0",
@@ -28,7 +28,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-standard": "5.0.0",
     "jest": "27.1.0",
-    "prettier": "2.3.2",
+    "prettier": "2.5.1",
     "tslint-config-standard": "9.0.0",
     "typedoc": "0.21.9",
     "typedoc-neo-theme": "1.1.1",
@@ -86,6 +86,10 @@
     "generate/uuid4.js",
     "generate/uuid4.mjs",
     "generate/uuid4.ts",
+    "generate/uuid5.cjs",
+    "generate/uuid5.js",
+    "generate/uuid5.mjs",
+    "generate/uuid5.ts",
     "index.cjs",
     "index.d.ts",
     "index.js",
@@ -137,5 +141,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
   "types": "./index.d.ts",
-  "version": "0.2.2"
+  "version": "0.2.3"
 }
