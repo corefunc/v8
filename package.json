@@ -50,6 +50,14 @@
     "base64/index.js",
     "base64/index.mjs",
     "base64/index.ts",
+    "cli/argv-parse.cjs",
+    "cli/argv-parse.js",
+    "cli/argv-parse.mjs",
+    "cli/argv-parse.d.ts",
+    "cli/index.cjs",
+    "cli/index.js",
+    "cli/index.mjs",
+    "cli/index.d.ts",
     "clone/clone-marshalling.cjs",
     "clone/clone-marshalling.js",
     "clone/clone-marshalling.mjs",
@@ -141,5 +149,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
   "types": "./index.d.ts",
-  "version": "0.2.3"
+  "version": "0.2.4"
 }

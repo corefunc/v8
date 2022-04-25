@@ -25,6 +25,22 @@ console.log(base64Decode("ZXhhbXBsZSB0ZXh0"));
 
 </details>
 
+### "CLI"
+
+<details>
+    <summary><b>argvParse()</b></summary>
+Parses `process.argv` string.
+
+```javascript
+import { argvParse } from "@corefunc/v8/cli/argv-parse";
+
+console.dir(argvParse());
+// "calc-md5=movie.mp4"
+// { 'calc-md5': 'movie.mp4' }
+```
+
+</details>
+
 ### "Clone"
 
 <details>

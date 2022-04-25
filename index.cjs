@@ -11,6 +11,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./base64"), exports);
+__exportStar(require("./cli"), exports);
 __exportStar(require("./clone"), exports);
 __exportStar(require("./deserialize"), exports);
 __exportStar(require("./generate"), exports);

@@ -2,6 +2,7 @@
   "categorizeByGroup": true,
   "entryPoints": [
     "base64/index.ts",
+    "cli/index.ts",
     "clone/index.ts",
     "deserialize/index.ts",
     "generate/index.ts",

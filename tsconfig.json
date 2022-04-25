@@ -3,6 +3,7 @@
     "allowJs": false,
     "allowSyntheticDefaultImports": false,
     "alwaysStrict": true,
+    "declaration": true,
     "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "lib": ["dom", "es2015", "es2016", "es2017", "es2018", "esnext"],
@@ -16,6 +17,7 @@
   "exclude": ["node_modules", "tests"],
   "include": [
     "base64",
+    "cli",
     "clone",
     "deserialize",
     "generate",
