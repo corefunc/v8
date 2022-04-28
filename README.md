@@ -41,6 +41,19 @@ console.dir(argvParse());
 
 </details>
 
+<details>
+    <summary><b>envParse()</b></summary>
+Parses `process.env` object.
+
+```javascript
+import { envParse } from "@corefunc/v8/cli/env-parse";
+
+console.dir(envParse());
+// {  SHELL: "/bin/zsh", SPACESHIP_VERSION: 3.16 }
+```
+
+</details>
+
 ### "Clone"
 
 <details>

@@ -54,6 +54,10 @@
     "cli/argv-parse.js",
     "cli/argv-parse.mjs",
     "cli/argv-parse.d.ts",
+    "cli/env-parse.cjs",
+    "cli/env-parse.js",
+    "cli/env-parse.mjs",
+    "cli/env-parse.d.ts",
     "cli/index.cjs",
     "cli/index.js",
     "cli/index.mjs",
@@ -149,5 +153,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
   "types": "./index.d.ts",
-  "version": "0.2.4"
+  "version": "0.2.5"
 }
