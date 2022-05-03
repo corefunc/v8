@@ -62,7 +62,7 @@ export enum NAMESPACE {
 }
 
 /**
- * @category crypto
+ * @category Crypto
  * @name generateUuid5
  * @description Generates a RFC 4122 version 5 UUID.
  * @summary ```import { generateUuid5 } from '@corefunc/v8/generate/uuid5';```

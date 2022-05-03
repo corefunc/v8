@@ -11,5 +11,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./number"), exports);
+__exportStar(require("./time-stamp"), exports);
 __exportStar(require("./uuid4"), exports);
 __exportStar(require("./uuid5"), exports);

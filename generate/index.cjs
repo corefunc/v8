@@ -11,5 +11,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./number.cjs"), exports);
+__exportStar(require("./time-stamp.cjs"), exports);
 __exportStar(require("./uuid4.cjs"), exports);
 __exportStar(require("./uuid5.cjs"), exports);

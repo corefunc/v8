@@ -65,7 +65,7 @@ function secureRandomNumber(minimum, maximum) {
 }
 
 /**
- * @category crypto
+ * @category Crypto
  * @name generateNumber
  * @description Secure random number generator. Integers only.
  * @param {number} minimum - Minimum integer to generate.

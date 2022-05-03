@@ -94,6 +94,10 @@
     "generate/number.js",
     "generate/number.mjs",
     "generate/number.ts",
+    "generate/time-stamp.cjs",
+    "generate/time-stamp.js",
+    "generate/time-stamp.mjs",
+    "generate/time-stamp.ts",
     "generate/uuid4.cjs",
     "generate/uuid4.js",
     "generate/uuid4.mjs",
@@ -153,5 +157,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
   "types": "./index.d.ts",
-  "version": "0.2.5"
+  "version": "0.2.6"
 }

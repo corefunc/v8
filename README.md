@@ -237,6 +237,22 @@ console.log(integer);
 </details>
 
 <details>
+    <summary><b>generateTimeStamp(start, end)</b></summary>
+Generates timestamp.
+
+```javascript
+import {
+  generateTimeStamp,
+} from '@corefunc/v8/generate/time-stamp';
+
+const timeStamp = generateTimeStamp(0, 31);
+// "2000123101020312345678901234567"
+console.log(timeStamp);
+```
+
+</details>
+
+<details>
     <summary><b>generateUuid4()</b></summary>
 Generates a random RFC 4122 version 4 UUID.
 

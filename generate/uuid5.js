@@ -57,7 +57,7 @@ var NAMESPACE;
     NAMESPACE["X500"] = "6ba7b814-9dad-11d1-80b4-00c04fd430c8";
 })(NAMESPACE = exports.NAMESPACE || (exports.NAMESPACE = {}));
 /**
- * @category crypto
+ * @category Crypto
  * @name generateUuid5
  * @description Generates a RFC 4122 version 5 UUID.
  * @summary ```import { generateUuid5 } from '@corefunc/v8/generate/uuid5';```

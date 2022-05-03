@@ -15,7 +15,7 @@ else {
     };
 }
 /**
- * @category crypto
+ * @category Crypto
  * @name generateUuid4
  * @description Generates a random RFC 4122 version 4 UUID.
  * @summary ```import { generateUuid4 } from '@corefunc/v8/generate/uuid4';```
