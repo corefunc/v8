@@ -22,4 +22,7 @@ else {
  * @returns {string} - Random RFC 4122 version 4 UUID.
  * @since 0.2.0
  */
-exports.generateUuid4 = randomUUID;
+function generateUuid4() {
+    return randomUUID();
+}
+exports.generateUuid4 = generateUuid4;

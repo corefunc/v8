@@ -6,4 +6,4 @@
  * @returns {string} - Random RFC 4122 version 4 UUID.
  * @since 0.2.0
  */
-export declare const generateUuid4: any;
+export declare function generateUuid4(): string;

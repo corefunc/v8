@@ -4,15 +4,15 @@ exports.generateUuid4 = void 0;
 const crypto = require("crypto");
 let randomUUID;
 if ("randomUUID" in crypto) {
-  randomUUID = crypto["randomUUID"];
-} else {
-  randomUUID = () => {
-    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (text) => {
-      const random = (Math.random() * 16) | 0,
-        value = text === "x" ? random : (random & 0x3) | 0x8;
-      return value.toString(16);
-    });
-  };
+    randomUUID = crypto["randomUUID"];
+}
+else {
+    randomUUID = () => {
+        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (text) => {
+            const random = (Math.random() * 16) | 0, value = text === "x" ? random : (random & 0x3) | 0x8;
+            return value.toString(16);
+        });
+    };
 }
 /**
  * @category Crypto
@@ -22,4 +22,7 @@ if ("randomUUID" in crypto) {
  * @returns {string} - Random RFC 4122 version 4 UUID.
  * @since 0.2.0
  */
-exports.generateUuid4 = randomUUID;
+function generateUuid4() {
+    return randomUUID();
+}
+exports.generateUuid4 = generateUuid4;

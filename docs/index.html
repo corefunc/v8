@@ -297,6 +297,18 @@
 </code></pre>
 				</details>
 				<details>
+					<summary><b>generateTimeStamp(start, end)</b></summary>
+					Generates timestamp.
+					<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">generateTimeStamp</span><span style="color: #000000">,</span>
+<span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@corefunc/v8/generate/time-stamp&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">timeStamp</span><span style="color: #000000"> = </span><span style="color: #795E26">generateTimeStamp</span><span style="color: #000000">(</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">31</span><span style="color: #000000">);</span>
+<span style="color: #008000">// &quot;2000123101020312345678901234567&quot;</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">timeStamp</span><span style="color: #000000">);</span>
+</code></pre>
+				</details>
+				<details>
 					<summary><b>generateUuid4()</b></summary>
 					Generates a random RFC 4122 version 4 UUID.
 					<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>

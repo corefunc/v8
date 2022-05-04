@@ -22,4 +22,6 @@ if ("randomUUID" in crypto) {
  * @returns {string} - Random RFC 4122 version 4 UUID.
  * @since 0.2.0
  */
-export const generateUuid4 = randomUUID;
+export function generateUuid4() {
+  return randomUUID();
+}
