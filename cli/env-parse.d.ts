@@ -8,4 +8,5 @@
  * @returns {Record<string, boolean | null | number | string | undefined>}
  * @since 0.2.5
  */
-export declare function envParse(defaults?: Record<string, boolean | null | number | string | undefined>, shouldBeStrings?: boolean): Record<string, boolean | null | number | string | undefined>;
+export declare function envParse(defaults: Record<string, boolean | null | number | string | undefined>, shouldBeStrings: false): Record<string, boolean | null | number | string | undefined>;
+export declare function envParse(defaults: Record<string, boolean | null | number | string | undefined>, shouldBeStrings: true): Record<string, string>;

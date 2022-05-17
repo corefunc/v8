@@ -1,16 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.envParse = void 0;
-/**
- * @category Process
- * @name envParse
- * @description Parses `process.env` string.
- * @summary ```import { envParse } from '@corefunc/v8/cli/env-parse';```
- * @param {Record<string, boolean | null | number | string | undefined>=} [defaults={}]
- * @param {boolean=} [shouldBeStrings=false]
- * @returns {Record<string, boolean | null | number | string | undefined>}
- * @since 0.2.5
- */
 function envParse(defaults = {}, shouldBeStrings = false) {
     const env = new Object(null);
     if (shouldBeStrings) {
@@ -37,7 +27,12 @@ function envParse(defaults = {}, shouldBeStrings = false) {
                     env[key] = undefined;
                     break;
                 case /\d/.test(check) && Number.isFinite(Number.parseFloat(check)):
-                    env[key] = Number.parseFloat(check);
+                    if (!check.includes(".") && !check.includes(",")) {
+                        env[key] = Number.parseInt(check, 10);
+                    }
+                    if ((check.match(/[.]/g) || []).length < 2) {
+                        env[key] = Number.parseFloat(check);
+                    }
                     break;
             }
         });

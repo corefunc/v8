@@ -9,6 +9,14 @@
  * @since 0.2.5
  */
 export function envParse(
+  defaults: Record<string, boolean | null | number | string | undefined>,
+  shouldBeStrings: false,
+): Record<string, boolean | null | number | string | undefined>;
+export function envParse(
+  defaults: Record<string, boolean | null | number | string | undefined>,
+  shouldBeStrings: true,
+): Record<string, string>;
+export function envParse(
   defaults: Record<string, boolean | null | number | string | undefined> = {},
   shouldBeStrings = false,
 ): Record<string, boolean | null | number | string | undefined> {
@@ -36,7 +44,12 @@ export function envParse(
           env[key] = undefined;
           break;
         case /\d/.test(check) && Number.isFinite(Number.parseFloat(check)):
-          env[key] = Number.parseFloat(check);
+          if (!check.includes(".") && !check.includes(",")) {
+            env[key] = Number.parseInt(check, 10);
+          }
+          if ((check.match(/[.]/g) || []).length < 2) {
+            env[key] = Number.parseFloat(check);
+          }
           break;
       }
     });
