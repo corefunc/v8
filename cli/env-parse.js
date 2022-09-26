@@ -1,6 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.envParse = void 0;
+/**
+ * @category Process
+ * @name envParse
+ * @description Parses `process.env` string.
+ * @summary ```import { envParse } from '@corefunc/v8/cli/env-parse';```
+ * @param {Record<string, boolean | null | number | string | undefined>=} [defaults={}]
+ * @param {boolean=} [shouldBeStrings=false]
+ * @returns {Record<string, boolean | null | number | string | undefined>}
+ * @since 0.2.5
+ */
 function envParse(defaults = {}, shouldBeStrings = false) {
     const env = new Object(null);
     if (shouldBeStrings) {
@@ -37,12 +47,14 @@ function envParse(defaults = {}, shouldBeStrings = false) {
             }
         });
     }
-    Object.keys(defaults).forEach((key) => {
-        if (key in env) {
-            return;
-        }
-        env[key] = defaults[key];
-    });
+    if (defaults) {
+        Object.keys(defaults).forEach((key) => {
+            if (key in env) {
+                return;
+            }
+            env[key] = defaults[key];
+        });
+    }
     return Object.keys(env)
         .sort((alpha, beta) => alpha.localeCompare(beta))
         .reduce((sorted, key) => {

@@ -9,12 +9,12 @@
  * @since 0.2.5
  */
 export function envParse(
-  defaults: Record<string, boolean | null | number | string | undefined>,
-  shouldBeStrings: false,
+  defaults?: Record<string, boolean | null | number | string | undefined>,
+  shouldBeStrings?: false,
 ): Record<string, boolean | null | number | string | undefined>;
 export function envParse(
-  defaults: Record<string, boolean | null | number | string | undefined>,
-  shouldBeStrings: true,
+  defaults?: Record<string, boolean | null | number | string | undefined>,
+  shouldBeStrings?: true,
 ): Record<string, string>;
 export function envParse(
   defaults: Record<string, boolean | null | number | string | undefined> = {},
@@ -54,12 +54,14 @@ export function envParse(
       }
     });
   }
-  Object.keys(defaults).forEach((key) => {
-    if (key in env) {
-      return;
-    }
-    env[key] = defaults[key];
-  });
+  if (defaults) {
+    Object.keys(defaults).forEach((key) => {
+      if (key in env) {
+        return;
+      }
+      env[key] = defaults[key];
+    });
+  }
   return Object.keys(env)
     .sort((alpha, beta) => alpha.localeCompare(beta))
     .reduce((sorted, key) => {

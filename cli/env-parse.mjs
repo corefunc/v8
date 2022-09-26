@@ -46,12 +46,14 @@ export function envParse(
       }
     });
   }
-  Object.keys(defaults).forEach((key) => {
-    if (key in env) {
-      return;
-    }
-    env[key] = defaults[key];
-  });
+  if (defaults) {
+    Object.keys(defaults).forEach((key) => {
+      if (key in env) {
+        return;
+      }
+      env[key] = defaults[key];
+    });
+  }
   return Object.keys(env)
     .sort((alpha, beta) => alpha.localeCompare(beta))
     .reduce((sorted, key) => {
