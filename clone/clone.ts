@@ -25,19 +25,19 @@ export function clone<Type extends unknown>(value: Type, setPrototype = true): T
     }
     case value instanceof Date: {
       const clonedDate = new Date();
-      clonedDate.setTime((value as Date).getTime());
+      clonedDate.setTime((value as unknown as Date).getTime());
       return clonedDate as Type;
     }
     case value instanceof Map: {
       const clonedMap = new Map();
-      ((value as unknown) as Map<any, any>).forEach((value, key) => clonedMap.set(key, clone(value)));
+      (value as unknown as Map<any, any>).forEach((value, key) => clonedMap.set(key, clone(value)));
       return clonedMap as Type;
     }
     case value instanceof Set: {
-      return new Set(Array.from(((value as unknown) as Set<any>).values()).map((value) => clone(value))) as Type;
+      return new Set(Array.from((value as unknown as Set<any>).values()).map((value) => clone(value))) as Type;
     }
     case value instanceof Error: {
-      const errorOriginal = (value as unknown) as Error;
+      const errorOriginal = value as unknown as Error;
       // const errorCloned = Object.assign(Object.create(errorOriginal), { message: errorOriginal.message });
       const errorCloned = Object.create(Object.getPrototypeOf(value));
       if (errorOriginal.stack) {
